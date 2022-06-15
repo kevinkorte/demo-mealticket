@@ -1,0 +1,14 @@
+<template name="restaurant_card">
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Restaurant Id: {{_id}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Owner Id: {{owner_id}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Stripe Id: {{stripe_id}}</h6>
+      <p>Accepting Orders: {{{checkIfOpen open}}}</p>
+    </div>
+    <div class="card-footer text-muted d-flex justify-content-end">
+      <button class="btn btn-dark" id="invite-btn">Resend Enrollment</button>
+      <button class="btn btn-danger ms-2" id="restaurant-delete">Delete</button>
+    </div>
+  </div>
+</template>

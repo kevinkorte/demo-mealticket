@@ -1,0 +1,10 @@
+.hero-login-btn {
+  --bs-btn-padding-x: 2.5rem;
+  --bs-btn-border-color: #065f46;
+  --bs-btn-hover-bg: #064e3b;
+  --bs-btn-hover-color: #6ee7b7;
+  transition: transform 400;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,73 @@
+<template name="Component_restaurant_details_form">
+  <div id="details-form-wrapper">
+    <div class="row">
+      <div class="col-8">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="address1"
+            id="address1"
+            class="form-control"
+            placeholder="Street Address"
+          />
+          <label for="address1">Street Address</label>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="address2"
+            id="address2"
+            class="form-control"
+            placeholder="Suite"
+          />
+          <label for="address2">Suite</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="city"
+            id="city"
+            class="form-control"
+            placeholder="City"
+          />
+          <label for="city">City</label>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="state"
+            id="state"
+            class="form-control"
+            placeholder="State"
+          />
+          <label for="state">State</label>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            class="form-control"
+            placeholder="Zipcode"
+          />
+          <label for="zipcode">Zipcode</label>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-4 d-grid">
+        <button type="submit" class="btn btn-dark">Next</button>
+      </div>
+    </div>
+  </div>
+</template>

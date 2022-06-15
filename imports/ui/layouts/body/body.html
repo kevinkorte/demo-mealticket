@@ -1,0 +1,5 @@
+<template name="App_body">
+  <!-- {{> Component_nav_customer}}  -->
+  {{#if showMenu}} {{> Component_nav_restaurant}} {{else}} {{>
+  Component_nav_customer}} {{/if}}{{> yield}}
+</template>

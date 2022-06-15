@@ -1,0 +1,39 @@
+<template name="Component_nav_restaurant">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"
+        >Mealticket <span class="text-success">Restaurant</span></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <span class="badge bg-success text-dark mx-3">Early Access</span>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              href="{{pathFor 'App.restaurants'}}"
+              class="nav-link {{isActiveRoute 'App.restaurants'}}"
+              >Restaurants</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {{isActiveRoute 'Restaurant.settings'}}"
+              href="{{pathFor 'Restaurant.settings'}}"
+              >Settings</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>

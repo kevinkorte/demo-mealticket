@@ -1,0 +1,1 @@
+import "./navbar-restaurant.html";

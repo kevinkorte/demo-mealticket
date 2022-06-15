@@ -1,0 +1,36 @@
+<template name="Component_product">
+  <div class="d-flex justify-content-between product">
+    <div class="d-flex">
+      <div>
+        <div
+          class="product-img"
+          style="background-image: url({{product.data.object.images.[0]}})"
+        ></div>
+      </div>
+      <div class="mt-2">
+        <h5 class="font-inter mb-0">{{product.data.object.name}}</h5>
+        <p class="text-secondary font-inter">
+          {{product.data.object.description}}
+        </p>
+      </div>
+    </div>
+    <div class="d-flex flex-nowrap align-items-center">
+      <div class="flex-shrink-0 font-inter">
+        <span class="font-weight-700">{{getPrice product.data.object.id}}</span>
+        / {{quantity product.data.object.id}}
+      </div>
+      <div>
+        <input
+          type="number"
+          name="qty"
+          class="form-control ms-2 qty-input"
+          value="0"
+          min="0"
+          data-price="{{getPriceId product.data.object.id}}"
+          data-dow="mon"
+          data-cost="{{getCost product.data.object.id}}"
+        />
+      </div>
+    </div>
+  </div>
+</template>

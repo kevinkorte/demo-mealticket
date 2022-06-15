@@ -1,0 +1,52 @@
+<template name="Page_login">
+  <div class="container">
+    <div class="row vh-100 align-items-center justify-content-center">
+      <div class="col-12 col-md-8 col-lg-7 col-xl-5 col-xxl-4">
+        <div class="d-flex align-items-center">
+          <h3 class="font-gray-800 font-weight-extra-bold font-montserrat me-3">
+            Login
+          </h3>
+          <span class="badge bg-warning text-dark">Early Access</span>
+        </div>
+
+        <p class="text-secondary">
+          Welcome back. Log into your account below.<br />
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            {{#if shouldShowError}}
+            <div class="alert alert-danger" role="alert">
+              {{showErrorReason}}
+            </div>
+            {{/if}}
+            <form id="login">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  name="email"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  name="password"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-dark">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

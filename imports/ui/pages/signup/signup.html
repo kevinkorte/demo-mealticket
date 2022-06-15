@@ -1,0 +1,36 @@
+<template name="Page_signup">
+  <div class="container">
+    <div class="row vh-100 align-items-center justify-content-center">
+      <div class="col-7">
+        <div class="d-flex align-items-center">
+          <h3 class="font-gray-800 font-weight-extra-bold font-montserrat me-3">
+            Signup
+          </h3>
+          <span class="badge bg-warning text-dark">Early Access</span>
+        </div>
+
+        <p class="text-secondary">
+          Meal prep on easy mode. Order prepared food from local restaurants on
+          a consistent schedule.<br />
+          <strong
+            >If you are a restaurant owner, we are currently in a closed beta
+            and will allow restaurant signups in the future.</strong
+          >
+        </p>
+        <div class="row">
+          <div class="col-6 bg-light rounded py-3">
+            <div class="h5">Sign up is free</div>
+            <ul>
+              <li>
+                No platform costs, only pay the restaurants for what you order.
+              </li>
+              <li>Order and pay directly to local restaurants.</li>
+              <li>Built to be private and secure.</li>
+            </ul>
+          </div>
+          <div class="col-6">{{> Signup_form}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,179 @@
+<template name="Page_restaurant">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="h4 font-inter font-weight-900">
+              Teriyaki Grill (Kennewick)
+            </div>
+            <div class="address font-inter">
+              7600 W Clearwater Ave, Kennewick, WA 99336
+            </div>
+            <div class="phone font-inter">(509) 735-3848</div>
+            <div class="font-inter text-secondary mt-3">
+              Available for pickup every Monday and Thursday
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-100"
+          style="
+            background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=46.21021722962029,-119.2249284187267&zoom=15&size=500x200&markers=46.21021722962029,-119.2249284187267&key=AIzaSyARlpIv-a69EWLL3-T7au6tjYCnvmhzCko);
+            height: 200px;
+            background-position: center;
+            border-radius: 8px;
+          "
+        ></div>
+      </div>
+
+      <div class="col-8">
+        <form id="order">
+          <div class="mb-3">
+            <div class="h4 font-inter font-weight-900">Order</div>
+            <p class="text-secondary">
+              You can pick up food on multiple days by placing a new order for
+              each day and frequency desired. You will only be charged for food
+              you pickup on your pickup day.
+            </p>
+          </div>
+          <div class="mb-3">
+            <div class="font-inter font-weight-700">Pickup Frequency</div>
+            <div>
+              <input
+                type="radio"
+                name="weekly"
+                id="pickup-weekly"
+                value="weekly"
+                checked
+              />
+              <label for="pickup-weekly">Weekly</label>
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="font-inter font-weight-700">Pickup Day</div>
+            <div>
+              <input
+                type="radio"
+                name="day"
+                id="monday-pickup"
+                value="monday"
+                checked
+              />
+              <label for="monday-pickup"
+                >Monday
+
+                <span class="font-weight-400 pickupDate"
+                  >First available pickup date will be {{nextPickup
+                  "monday"}}</span
+                >
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="day"
+                id="thursday-pickup"
+                value="thursday"
+              />
+              <label for="thursday-pickup"
+                >Thursday
+
+                <span class="font-weight-400 pickupDate"
+                  >First available pickup date will be {{nextPickup
+                  "thursday"}}</span
+                >
+              </label>
+            </div>
+            {{#if hasError}}
+            <div class="alert alert-danger mt-2" role="alert">
+              {{readError}}
+            </div>
+            {{/if}}
+          </div>
+          <div class="items border-top border-bottom pt-3">
+            {{#each getProducts}} {{> Component_product}} {{/each}}
+          </div>
+          {{#with restaurants}}
+          <input type="hidden" id="restaurant-id" value="{{_id}}" />
+          {{/with}}
+          <div class="subtotal d-flex justify-content-end mt-3">
+            <div class="font-inter text-secondary me-5">Estimated Subtotal</div>
+            <div
+              class="subtotal-amount font-currency font-weight-400"
+              id="subtotal-amount"
+            >
+              {{getSubtotal}}
+            </div>
+          </div>
+          <!-- TODO: handle multiple tax rates -->
+          <div class="d-flex justify-content-end">
+            <div class="tax d-flex">
+              {{#each tax}} {{#if taxIsActive _id}}
+              <div class="font-inter text-secondary me-5">
+                Estimated {{taxName _id}}
+              </div>
+              <div
+                class="tax-amount font-currency font-weight-400"
+                id="tax-amount"
+                data-tax-percent="{{taxPercent _id}}"
+              >
+                {{getTaxTotal _id}}
+              </div>
+              {{/if}} {{/each}}
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <div class="font-inter text-secondary me-5 font-weight-700">
+              Estimated Total
+            </div>
+            <div
+              class="total-amount font-currency font-weight-700"
+              id="total-amount"
+            >
+              {{getTotal}}
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-dark">{{buttonText}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="loginSignupModal"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="">Signing up is always free.</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>Create an account.</p>
+          {{> Signup_form}}
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

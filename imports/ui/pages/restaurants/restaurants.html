@@ -1,0 +1,22 @@
+<template name="Page_restaurants">
+  <div class="container mt-5">
+    <div class="row">
+      {{#each restaurant}}
+      <div class="col-4">
+        <a
+          href="{{pathFor 'App.restaurant' slug_id=slug_id slug=slug}}"
+          class="restaurant-card card text-decoration-none text-dark"
+        >
+          <div class="card-body">
+            <div class="h4">Teriyaki Grill (Kennewick)</div>
+            <div class="address">
+              7600 W Clearwater Ave, Kennewick, WA 99336
+            </div>
+            <div class="phone">(509) 735-3848</div>
+          </div>
+        </a>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</template>

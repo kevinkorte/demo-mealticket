@@ -1,0 +1,16 @@
+<template name="Admin_dashboard">
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-6">
+        <div class="d-flex align-items-end justify-content-between">
+          <div class="h3">Restaurants</div>
+        </div>
+        <div class="bg-light p-2 border-top border-bottom mb-3">
+          {{> new_restaurant_form}}
+        </div>
+
+        {{#each restaurants}} {{> restaurant_card}} {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

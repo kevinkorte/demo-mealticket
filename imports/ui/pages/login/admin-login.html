@@ -1,0 +1,39 @@
+<template name="Admin_login">
+  <div class="container">
+    <div class="row vh-100 align-items-center justify-content-center">
+      <div class="col-6">
+        <form id="admin-login">
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control indigo-ring"
+              id="floatingInput"
+              name="email"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary px-4 d-flex align-items-center ms-auto"
+          >
+            Login
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right ms-2"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,58 @@
+<template name="Page_invitation">
+  <div class="container">
+    <div class="row vh-100 align-items-center justify-content-center">
+      <div class="col-6">
+        <h3 class="font-gray-800 font-weight-extra-bold font-montserrat">
+          Welcome!
+        </h3>
+        <p class="text-gray-700">
+          You're account awaits! You're one of the few who will get to check us
+          out with early access. We're happy to have you.
+        </p>
+        <form id="save-password">
+          <div class="d-flex">
+            <div class="flex-grow-1 me-3">
+              <label for="password">Choose a strong password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control me-2 indigo-ring"
+                placeholder="Password"
+              />
+            </div>
+            <div class="align-self-end">
+              <button
+                type="submit"
+                class="
+                  btn btn-dark
+                  px-2
+                  py-2
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  flex-shrink-0
+                "
+              >
+                Save Password
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right ms-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

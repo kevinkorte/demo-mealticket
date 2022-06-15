@@ -1,0 +1,27 @@
+.image-wrapper {
+  width: 100px;
+  & img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}
+
+.qty-input {
+  width: 75px;
+}
+.product-img {
+  background-color: #d6d3d1;
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.product {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,21 @@
+.map {
+  margin-right: -1rem;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+.map-fade {
+  width: 70%;
+  height: 200px;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  top: 0;
+  margin-top: -1rem;
+}
+.day-headline {
+  color: #404040;
+}
+.pickupDate {
+  background: hsla(199, 89, 48, 0.18);
+  color: #0284c7;
+  padding: 2px 8px;
+  font-size: 85%;
+}

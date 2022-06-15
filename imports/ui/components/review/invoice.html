@@ -1,0 +1,36 @@
+<template name="Component_invoice">
+  {{#if Template.subscriptionsReady}} {{#each item in invoice.lines.data}}
+  <div class="card mb-3">
+    <div class="card-body d-flex align-items-center justify-content-between">
+      <span class="card-text mb-0">{{item.description}}</span>
+      <span class="card-text mb-0 font-currency fs-5"
+        >{{formatCurrency item.amount item.currency}}</span
+      >
+    </div>
+  </div>
+  {{/each}} {{/if}}
+  <hr />
+  {{#if Template.subscriptionsReady}}
+  <div class="d-flex justify-content-end align-items-center mt-3">
+    <div class="font-inter text-secondary me-5">Subtotal</div>
+    <div class="font-currency font-weight-400 fs-5">
+      {{formatCurrency invoice.subtotal invoice.currency}}
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end align-items-center mt-2">
+    <div class="font-inter text-secondary me-5">Sales Tax</div>
+    <div class="font-currency font-weight-400 fs-5">
+      {{formatCurrency invoice.tax invoice.currency}}
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end align-items-center mt-2">
+    <div class="font-inter text-secondary me-5">Total</div>
+    <div class="font-currency font-weight-700 fs-5">
+      {{formatCurrency invoice.total invoice.currency}}
+    </div>
+  </div>
+
+  {{/if}}
+</template>

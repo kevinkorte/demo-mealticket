@@ -1,0 +1,28 @@
+.hero {
+  background-color: $primary;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transform: rotate(3deg);
+}
+.hero-text {
+  // font-size: 4rem;
+  @include font-size(4rem);
+  color: #c5e5dd;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.hero-ea {
+  color: #24af8a;
+}
+
+.hero-icon-wrapper {
+  border-radius: 50%;
+  background-color: #d1fae5;
+  padding: 1.3rem;
+}
+.container-below-hero {
+  margin-top: 5rem;
+}

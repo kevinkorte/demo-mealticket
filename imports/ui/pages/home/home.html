@@ -1,0 +1,237 @@
+<template name="App_home">
+  <div class="container-fluid hero py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h1 class="hero-text font-hero font-weight-700 mb-4">
+              Meal prep from local restaurants
+            </h1>
+            <a
+              class="btn btn-yellow-500 text-amber-800 fw-bold btn-lg"
+              href="{{pathFor 'App.signup'}}"
+              role="button"
+              >Signup for Free</a
+            >
+            <div class="mt-2">
+              <small class="hero-ea"
+                >&#42;Currently in Early Access &mdash; Restaurant signup is by
+                invitation only.</small
+              >
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="d-flex col-8 col-lg-12 mx-auto mt-3">
+              <img
+                src="/img/hero-5-22.jpg"
+                alt="Food in a container"
+                class="hero-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mb-4 container-below-hero">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex align-items-center mb-5">
+              <div
+                class="hero-icon-wrapper me-4 d-flex align-items-center justify-content-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  class="bi bi-pin-map text-emerald-600"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
+                  />
+                </svg>
+              </div>
+
+              <div>
+                <div class="h3 text-slate-700">
+                  Find restaurants local to you
+                </div>
+                <div class="text-slate-500">
+                  Local restaurants can join and offer prepared, bulk food to
+                  order.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex align-items-center justify-content-end mb-5">
+              <div class="text-end">
+                <div class="h3 text-slate-700">Place a reoccurring order</div>
+                <div class="text-slate-500">
+                  Automatically pay for each order the day of pickup.
+                </div>
+              </div>
+              <div
+                class="hero-icon-wrapper ms-4 d-flex align-items-center justify-content-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  class="bi bi-bag text-emerald-600"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex align-items-center mb-5">
+              <div
+                class="hero-icon-wrapper me-4 d-flex align-items-center justify-content-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  class="bi bi-pin-map text-emerald-600"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
+                  />
+                </svg>
+              </div>
+
+              <div>
+                <div class="h3 text-slate-700">
+                  Pick up your food on a consistent schedule
+                </div>
+                <div class="text-slate-500">
+                  Stop by the restaurant on your pickup day to grab your food
+                  and go
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="font-montserrat fs-4 mb-3 mt-5">FAQ</div>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Does it cost anything?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    You only pay for the food you order on a reoccurring basis.
+                    Each restaurant sets their own options, prices, frequencies,
+                    and pick-up dates to suite their needs. Mealticket takes a
+                    small percentage of each sale to cover our costs.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    What's the refund policy?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Each restaurant has full control over issuing refunds or
+                    credits for future purchases, and thus set their own refund
+                    policies. We recommend checking with the restaurant directly
+                    for further information on their policies.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Is this secure?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Yes! Mealticket uses the industry standard SSL certificates
+                    to create a secure, encrypted connection between you and us.
+                    In addition, neither Mealticket or a restaurant receives or
+                    stores your credit card information. Mealticket uses an
+                    industry leader
+                    <a href="https://stripe.com/" target="_blank">Stripe</a> to
+                    directly process and handle all payment transactions.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

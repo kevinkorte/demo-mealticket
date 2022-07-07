@@ -3,4 +3,5 @@
 import "./fixtures.js";
 import "./accounts";
 import "./webhooks";
+import "./email";
 import "./register-api.js";

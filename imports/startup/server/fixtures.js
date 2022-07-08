@@ -4,6 +4,7 @@ import { Meteor } from "meteor/meteor";
 import { Roles } from "meteor/alanning:roles";
 import { Accounts } from "meteor/accounts-base";
 import { Random } from "meteor/random";
+const stripe = require("stripe")(Meteor.settings.private.stripe_sk);
 
 Meteor.startup(() => {
   //1. Set up all role accounts
@@ -34,4 +35,13 @@ Meteor.startup(() => {
     Roles.addUsersToRoles(userId, "super-admin");
     console.log("Admin account created. Admin ID: ", userId);
   }
+
+  //Add a demo restaurant
+  const users = Meteor.users.find();
+  console.log("USERS COUNT: ", users.count());
+  users.forEach((user) => {
+    console.log({ user });
+    console.log(user.emails[0].address);
+  });
+  // Meteor.call("accounts.adminCreateRestaurant", "kevintestingapps@gmail.com");
 });
